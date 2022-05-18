@@ -1,0 +1,55 @@
+object frmcadastroassunto: Tfrmcadastroassunto
+  Left = 1004
+  Height = 393
+  Top = 349
+  Width = 664
+  Caption = 'Cadastro de Assunto'
+  ClientHeight = 393
+  ClientWidth = 664
+  DesignTimePPI = 120
+  OnCreate = FormCreate
+  LCLVersion = '2.2.0.4'
+  object DBGrid1: TDBGrid
+    Left = 16
+    Height = 312
+    Top = 8
+    Width = 640
+    Color = clWindow
+    Columns = <    
+      item
+        Title.Caption = 'Código'
+        FieldName = 'ass_codigo'
+      end    
+      item
+        Title.Caption = 'Descrição'
+        Width = 490
+        FieldName = 'descricao'
+      end>
+    DataSource = dsAssunto
+    TabOrder = 0
+  end
+  object DBNavigator1: TDBNavigator
+    Left = 16
+    Height = 31
+    Top = 344
+    Width = 301
+    BevelOuter = bvNone
+    ChildSizing.EnlargeHorizontal = crsScaleChilds
+    ChildSizing.EnlargeVertical = crsScaleChilds
+    ChildSizing.ShrinkHorizontal = crsScaleChilds
+    ChildSizing.ShrinkVertical = crsScaleChilds
+    ChildSizing.Layout = cclLeftToRightThenTopToBottom
+    ChildSizing.ControlsPerLine = 100
+    ClientHeight = 31
+    ClientWidth = 301
+    DataSource = dsAssunto
+    Options = []
+    TabOrder = 1
+  end
+  object dsAssunto: TDataSource
+    DataSet = dmConexao.tblAssunto
+    OnDataChange = dsAssuntoDataChange
+    Left = 352
+    Top = 328
+  end
+end

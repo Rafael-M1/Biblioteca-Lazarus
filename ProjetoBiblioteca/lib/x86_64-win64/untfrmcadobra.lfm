@@ -1,0 +1,169 @@
+object frmcadastroobra: Tfrmcadastroobra
+  Left = 601
+  Height = 725
+  Top = 104
+  Width = 1083
+  Caption = 'Cadastro de Obra'
+  ClientHeight = 725
+  ClientWidth = 1083
+  DesignTimePPI = 120
+  OnCreate = FormCreate
+  LCLVersion = '2.2.0.4'
+  object DBGrid1: TDBGrid
+    Left = 32
+    Height = 250
+    Top = 16
+    Width = 1040
+    Color = clWindow
+    Columns = <    
+      item
+        ReadOnly = True
+        Title.Caption = 'obr_codigo'
+        FieldName = 'obr_codigo'
+      end    
+      item
+        Title.Caption = 'titulo'
+        FieldName = 'titulo'
+      end    
+      item
+        Title.Caption = 'tipo_obra'
+        FieldName = 'tipo_obra'
+      end    
+      item
+        Title.Caption = 'edt_codigo'
+        FieldName = 'edt_codigo'
+      end>
+    DataSource = dsObra
+    TabOrder = 0
+  end
+  object DBNavigator1: TDBNavigator
+    Left = 32
+    Height = 31
+    Top = 280
+    Width = 301
+    BevelOuter = bvNone
+    ChildSizing.EnlargeHorizontal = crsScaleChilds
+    ChildSizing.EnlargeVertical = crsScaleChilds
+    ChildSizing.ShrinkHorizontal = crsScaleChilds
+    ChildSizing.ShrinkVertical = crsScaleChilds
+    ChildSizing.Layout = cclLeftToRightThenTopToBottom
+    ChildSizing.ControlsPerLine = 100
+    ClientHeight = 31
+    ClientWidth = 301
+    DataSource = dsObra
+    Options = []
+    TabOrder = 1
+  end
+  object PageControl1: TPageControl
+    Left = 32
+    Height = 353
+    Top = 328
+    Width = 1040
+    ActivePage = TabSheet2
+    TabIndex = 1
+    TabOrder = 2
+    object TabSheet1: TTabSheet
+      Caption = 'Autor'
+      ClientHeight = 320
+      ClientWidth = 1032
+      OnContextPopup = TabSheet1ContextPopup
+      object DBGrid2: TDBGrid
+        Left = 0
+        Height = 264
+        Top = 0
+        Width = 1032
+        Color = clWindow
+        Columns = <        
+          item
+            Title.Caption = 'aut_codigo'
+            FieldName = 'aut_codigo'
+          end        
+          item
+            Title.Caption = 'obr_codigo'
+            FieldName = 'obr_codigo'
+          end        
+          item
+            Title.Caption = 'ordem'
+            FieldName = 'ordem'
+          end>
+        DataSource = dsObra_Autor
+        TabOrder = 0
+      end
+      object DBNavigator2: TDBNavigator
+        Left = 0
+        Height = 31
+        Top = 280
+        Width = 301
+        BevelOuter = bvNone
+        ChildSizing.EnlargeHorizontal = crsScaleChilds
+        ChildSizing.EnlargeVertical = crsScaleChilds
+        ChildSizing.ShrinkHorizontal = crsScaleChilds
+        ChildSizing.ShrinkVertical = crsScaleChilds
+        ChildSizing.Layout = cclLeftToRightThenTopToBottom
+        ChildSizing.ControlsPerLine = 100
+        ClientHeight = 31
+        ClientWidth = 301
+        DataSource = dsObra_Autor
+        Options = []
+        TabOrder = 1
+      end
+    end
+    object TabSheet2: TTabSheet
+      Caption = 'Assunto'
+      ClientHeight = 320
+      ClientWidth = 1032
+      OnContextPopup = TabSheet2ContextPopup
+      object DBGrid3: TDBGrid
+        Left = 0
+        Height = 250
+        Top = 8
+        Width = 1032
+        Color = clWindow
+        Columns = <        
+          item
+            Title.Caption = 'obr_codigo'
+            FieldName = 'obr_codigo'
+          end        
+          item
+            Title.Caption = 'ass_codigo'
+            FieldName = 'ass_codigo'
+          end>
+        DataSource = dsObra_Assunto
+        TabOrder = 0
+      end
+      object DBNavigator3: TDBNavigator
+        Left = 0
+        Height = 31
+        Top = 272
+        Width = 301
+        BevelOuter = bvNone
+        ChildSizing.EnlargeHorizontal = crsScaleChilds
+        ChildSizing.EnlargeVertical = crsScaleChilds
+        ChildSizing.ShrinkHorizontal = crsScaleChilds
+        ChildSizing.ShrinkVertical = crsScaleChilds
+        ChildSizing.Layout = cclLeftToRightThenTopToBottom
+        ChildSizing.ControlsPerLine = 100
+        ClientHeight = 31
+        ClientWidth = 301
+        DataSource = dsObra_Assunto
+        Options = []
+        TabOrder = 1
+      end
+    end
+  end
+  object dsObra: TDataSource
+    DataSet = dmConexao.tblObra
+    Left = 360
+    Top = 280
+  end
+  object dsObra_Autor: TDataSource
+    DataSet = dmConexao.tblObra_Autor
+    Left = 520
+    Top = 280
+  end
+  object dsObra_Assunto: TDataSource
+    DataSet = dmConexao.tblObra_Assunto
+    Left = 656
+    Top = 280
+  end
+end

@@ -1,0 +1,56 @@
+object frmPrincipal: TfrmPrincipal
+  Left = 966
+  Height = 400
+  Top = 240
+  Width = 773
+  Caption = 'Sistema de Controle de Biblioteca'
+  ClientHeight = 375
+  ClientWidth = 773
+  DesignTimePPI = 120
+  Menu = MainMenu1
+  OnCreate = FormCreate
+  LCLVersion = '2.2.0.4'
+  object StatusBar1: TStatusBar
+    Left = 0
+    Height = 29
+    Top = 346
+    Width = 773
+    Panels = <>
+  end
+  object MainMenu1: TMainMenu
+    Left = 83
+    Top = 51
+    object MenuItem1: TMenuItem
+      Caption = 'Cadastro'
+      OnClick = MenuItem1Click
+      object MenuCadastroUsuario: TMenuItem
+        Caption = 'Cadastro de Usuário'
+        OnClick = MenuCadastroUsuarioClick
+      end
+      object MenuItem4: TMenuItem
+        Caption = 'Cadastro de Autor'
+        OnClick = MenuItem4Click
+      end
+      object MenuItem5: TMenuItem
+        Caption = 'Cadastro de Assunto'
+        OnClick = MenuItem5Click
+      end
+      object MenuItem6: TMenuItem
+        Caption = 'Cadastro de Editora'
+        OnClick = MenuItem6Click
+      end
+      object MenuItem3: TMenuItem
+        Caption = 'Cadastro de Emprestimo'
+        OnClick = MenuItem3Click
+      end
+      object MenuCadastroObra: TMenuItem
+        Caption = 'Cadastro de Obra'
+        OnClick = MenuCadastroObraClick
+      end
+      object MenuCadastroExemplar: TMenuItem
+        Caption = 'Cadastro de Exemplar'
+        OnClick = MenuCadastroExemplarClick
+      end
+    end
+  end
+end

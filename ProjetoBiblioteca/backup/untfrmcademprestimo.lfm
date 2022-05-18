@@ -1,0 +1,73 @@
+object frmcadastroemprestimo: Tfrmcadastroemprestimo
+  Left = 432
+  Height = 514
+  Top = 163
+  Width = 1394
+  Caption = 'Cadastro de Emprestimo'
+  ClientHeight = 514
+  ClientWidth = 1394
+  DesignTimePPI = 120
+  LCLVersion = '2.2.0.4'
+  object DBGrid1: TDBGrid
+    Left = 24
+    Height = 301
+    Top = 32
+    Width = 1336
+    Color = clWindow
+    Columns = <    
+      item
+        ReadOnly = True
+        Title.Caption = 'emp_codigo'
+        FieldName = 'emp_codigo'
+      end    
+      item
+        Title.Caption = 'usu_codigo'
+        FieldName = 'usu_codigo'
+      end    
+      item
+        Title.Caption = 'obr_codigo'
+        FieldName = 'obr_codigo'
+      end    
+      item
+        Title.Caption = 'exe_numero'
+        FieldName = 'exe_numero'
+      end    
+      item
+        Title.Caption = 'data_emprestimo'
+        FieldName = 'data_emprestimo'
+      end    
+      item
+        Title.Caption = 'data_prevista_devolucao'
+        FieldName = 'data_prevista_devolucao'
+      end    
+      item
+        Title.Caption = 'Observacao'
+        FieldName = 'Observacao'
+      end>
+    DataSource = dsEmprestimo
+    TabOrder = 0
+  end
+  object DBNavigator1: TDBNavigator
+    Left = 80
+    Height = 31
+    Top = 384
+    Width = 301
+    BevelOuter = bvNone
+    ChildSizing.EnlargeHorizontal = crsScaleChilds
+    ChildSizing.EnlargeVertical = crsScaleChilds
+    ChildSizing.ShrinkHorizontal = crsScaleChilds
+    ChildSizing.ShrinkVertical = crsScaleChilds
+    ChildSizing.Layout = cclLeftToRightThenTopToBottom
+    ChildSizing.ControlsPerLine = 100
+    ClientHeight = 31
+    ClientWidth = 301
+    DataSource = dsEmprestimo
+    Options = []
+    TabOrder = 1
+  end
+  object dsEmprestimo: TDataSource
+    DataSet = dmConexao.tblEmprestimo
+    Left = 528
+    Top = 360
+  end
+end

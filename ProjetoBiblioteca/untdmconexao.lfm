@@ -1,0 +1,268 @@
+object dmConexao: TdmConexao
+  OldCreateOrder = False
+  Height = 486
+  HorizontalOffset = 622
+  VerticalOffset = 275
+  Width = 471
+  PPI = 120
+  object dbcon: TZConnection
+    ControlsCodePage = cCP_UTF8
+    AutoEncodeStrings = True
+    Properties.Strings = (
+      'AutoEncodeStrings=True'
+      'controls_cp=CP_UTF8'
+    )
+    Connected = True
+    Port = 0
+    Database = 'C:\arquivosLazarus\ProjetoBiblioteca\biblioteca.db'
+    Protocol = 'sqlite-3'
+    Left = 24
+    Top = 96
+  end
+  object tblUsuario: TZTable
+    Connection = dbcon
+    Active = True
+    TableName = 'usuario'
+    Left = 376
+    Top = 96
+    object tblUsuariousu_codigo: TLargeintField
+      Alignment = taLeftJustify
+      DisplayLabel = 'Código'
+      FieldKind = fkData
+      FieldName = 'usu_codigo'
+      Index = 0
+      LookupCache = False
+      ProviderFlags = [pfInUpdate, pfInWhere]
+      ReadOnly = True
+      Required = False
+    end
+    object tblUsuarionome: TStringField
+      DisplayLabel = 'Nome'
+      FieldKind = fkData
+      FieldName = 'nome'
+      Index = 1
+      LookupCache = False
+      ProviderFlags = [pfInUpdate, pfInWhere]
+      ReadOnly = False
+      Required = True
+      Size = 50
+    end
+    object tblUsuariologradouro: TStringField
+      DisplayLabel = 'Logradouro'
+      FieldKind = fkData
+      FieldName = 'logradouro'
+      Index = 2
+      LookupCache = False
+      ProviderFlags = [pfInUpdate, pfInWhere]
+      ReadOnly = False
+      Required = False
+      Size = 50
+    end
+    object tblUsuarionumero: TStringField
+      DisplayLabel = 'Número'
+      FieldKind = fkData
+      FieldName = 'numero'
+      Index = 3
+      LookupCache = False
+      ProviderFlags = [pfInUpdate, pfInWhere]
+      ReadOnly = False
+      Required = False
+      Size = 6
+    end
+    object tblUsuariocomplemento: TStringField
+      DisplayLabel = 'Complemento'
+      FieldKind = fkData
+      FieldName = 'complemento'
+      Index = 4
+      LookupCache = False
+      ProviderFlags = [pfInUpdate, pfInWhere]
+      ReadOnly = False
+      Required = False
+      Size = 50
+    end
+    object tblUsuariobairro: TStringField
+      DisplayLabel = 'Bairro'
+      FieldKind = fkData
+      FieldName = 'bairro'
+      Index = 5
+      LookupCache = False
+      ProviderFlags = [pfInUpdate, pfInWhere]
+      ReadOnly = False
+      Required = False
+      Size = 50
+    end
+    object tblUsuariocidade: TStringField
+      DisplayLabel = 'Cidade'
+      FieldKind = fkData
+      FieldName = 'cidade'
+      Index = 6
+      LookupCache = False
+      ProviderFlags = [pfInUpdate, pfInWhere]
+      ReadOnly = False
+      Required = False
+      Size = 50
+    end
+    object tblUsuariouf: TStringField
+      DisplayLabel = 'UF'
+      FieldKind = fkData
+      FieldName = 'uf'
+      Index = 7
+      LookupCache = False
+      ProviderFlags = [pfInUpdate, pfInWhere]
+      ReadOnly = False
+      Required = False
+      Size = 2
+    end
+    object tblUsuariocep: TStringField
+      DisplayLabel = 'CEP'
+      FieldKind = fkData
+      FieldName = 'cep'
+      Index = 8
+      LookupCache = False
+      ProviderFlags = [pfInUpdate, pfInWhere]
+      ReadOnly = False
+      Required = False
+      Size = 8
+    end
+    object tblUsuariotelefone: TStringField
+      DisplayLabel = 'Telefone'
+      FieldKind = fkData
+      FieldName = 'telefone'
+      Index = 9
+      LookupCache = False
+      ProviderFlags = [pfInUpdate, pfInWhere]
+      ReadOnly = False
+      Required = False
+    end
+    object tblUsuariocpf: TStringField
+      DisplayLabel = 'CPF'
+      FieldKind = fkData
+      FieldName = 'cpf'
+      Index = 10
+      LookupCache = False
+      ProviderFlags = [pfInUpdate, pfInWhere]
+      ReadOnly = False
+      Required = False
+      Size = 11
+    end
+  end
+  object tblAutor: TZTable
+    Connection = dbcon
+    Active = True
+    TableName = 'autor'
+    Left = 128
+    Top = 16
+    object tblAutoraut_codigo: TLargeintField
+      DisplayLabel = 'Código'
+      FieldKind = fkData
+      FieldName = 'aut_codigo'
+      Index = 0
+      LookupCache = False
+      ProviderFlags = [pfInUpdate, pfInWhere]
+      ReadOnly = True
+      Required = False
+    end
+    object tblAutornome: TStringField
+      DisplayLabel = 'Nome'
+      FieldKind = fkData
+      FieldName = 'nome'
+      Index = 1
+      LookupCache = False
+      ProviderFlags = [pfInUpdate, pfInWhere]
+      ReadOnly = False
+      Required = True
+      Size = 50
+    end
+  end
+  object tblAssunto: TZTable
+    Connection = dbcon
+    Active = True
+    TableName = 'assunto'
+    Left = 128
+    Top = 376
+    object tblAssuntoass_codigo: TLargeintField
+      DisplayLabel = 'Código'
+      FieldKind = fkData
+      FieldName = 'ass_codigo'
+      Index = 0
+      LookupCache = False
+      ProviderFlags = [pfInUpdate, pfInWhere]
+      ReadOnly = True
+      Required = False
+    end
+    object tblAssuntodescricao: TStringField
+      DisplayLabel = 'Descrição'
+      FieldKind = fkData
+      FieldName = 'descricao'
+      Index = 1
+      LookupCache = False
+      ProviderFlags = [pfInUpdate, pfInWhere]
+      ReadOnly = False
+      Required = True
+      Size = 50
+    end
+  end
+  object tblEditora: TZTable
+    Connection = dbcon
+    Active = True
+    TableName = 'editora'
+    Left = 24
+    Top = 192
+    object tblEditoraedt_codigo: TLargeintField
+      DisplayLabel = 'Código Editora'
+      FieldKind = fkData
+      FieldName = 'edt_codigo'
+      Index = 0
+      LookupCache = False
+      ProviderFlags = [pfInUpdate, pfInWhere]
+      ReadOnly = True
+      Required = False
+    end
+    object tblEditoranome: TStringField
+      DisplayLabel = 'Nome'
+      FieldKind = fkData
+      FieldName = 'nome'
+      Index = 1
+      LookupCache = False
+      ProviderFlags = [pfInUpdate, pfInWhere]
+      ReadOnly = False
+      Required = True
+      Size = 50
+    end
+  end
+  object tblObra: TZTable
+    Connection = dbcon
+    Active = True
+    TableName = 'obra'
+    Left = 128
+    Top = 192
+  end
+  object tblObra_Autor: TZTable
+    Connection = dbcon
+    Active = True
+    TableName = 'obra_autor'
+    Left = 128
+    Top = 96
+  end
+  object tblEmprestimo: TZTable
+    Connection = dbcon
+    Active = True
+    TableName = 'emprestimo'
+    Left = 376
+    Top = 192
+  end
+  object tblExemplar: TZTable
+    Connection = dbcon
+    Active = True
+    TableName = 'exemplar'
+    Left = 256
+    Top = 192
+  end
+  object tblObra_Assunto: TZTable
+    Connection = dbcon
+    Active = True
+    TableName = 'obra_assunto'
+    Left = 128
+    Top = 288
+  end
+end

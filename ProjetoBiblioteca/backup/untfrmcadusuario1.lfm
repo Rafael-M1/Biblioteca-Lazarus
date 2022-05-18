@@ -1,0 +1,218 @@
+object frmcadastrousuario1: Tfrmcadastrousuario1
+  Left = 287
+  Height = 577
+  Top = 210
+  Width = 1218
+  Caption = 'Cadastro de Usuário (1)'
+  ClientHeight = 577
+  ClientWidth = 1218
+  DesignTimePPI = 120
+  OnCreate = FormCreate
+  LCLVersion = '2.2.0.4'
+  object DBNavigator1: TDBNavigator
+    Left = 192
+    Height = 31
+    Top = 400
+    Width = 301
+    BevelOuter = bvNone
+    ChildSizing.EnlargeHorizontal = crsScaleChilds
+    ChildSizing.EnlargeVertical = crsScaleChilds
+    ChildSizing.ShrinkHorizontal = crsScaleChilds
+    ChildSizing.ShrinkVertical = crsScaleChilds
+    ChildSizing.Layout = cclLeftToRightThenTopToBottom
+    ChildSizing.ControlsPerLine = 100
+    ClientHeight = 31
+    ClientWidth = 301
+    DataSource = frmcadastrousuario.dsUsuario
+    Options = []
+    TabOrder = 0
+  end
+  object DBEdit1: TDBEdit
+    Left = 160
+    Height = 28
+    Top = 32
+    Width = 100
+    DataField = 'usu_codigo'
+    DataSource = frmcadastrousuario.dsUsuario
+    MaxLength = 0
+    TabOrder = 1
+  end
+  object DBEdit2: TDBEdit
+    Left = 160
+    Height = 28
+    Top = 72
+    Width = 337
+    DataField = 'nome'
+    DataSource = frmcadastrousuario.dsUsuario
+    MaxLength = 50
+    TabOrder = 2
+  end
+  object DBEdit3: TDBEdit
+    Left = 160
+    Height = 28
+    Top = 112
+    Width = 337
+    DataField = 'logradouro'
+    DataSource = frmcadastrousuario.dsUsuario
+    MaxLength = 50
+    TabOrder = 3
+  end
+  object DBEdit4: TDBEdit
+    Left = 160
+    Height = 28
+    Top = 232
+    Width = 168
+    DataField = 'numero'
+    DataSource = frmcadastrousuario.dsUsuario
+    MaxLength = 6
+    TabOrder = 4
+  end
+  object DBEdit5: TDBEdit
+    Left = 160
+    Height = 28
+    Top = 152
+    Width = 337
+    DataField = 'complemento'
+    DataSource = frmcadastrousuario.dsUsuario
+    MaxLength = 50
+    TabOrder = 5
+  end
+  object DBEdit6: TDBEdit
+    Left = 160
+    Height = 28
+    Top = 192
+    Width = 337
+    DataField = 'bairro'
+    DataSource = frmcadastrousuario.dsUsuario
+    MaxLength = 50
+    TabOrder = 6
+  end
+  object DBEdit7: TDBEdit
+    Left = 632
+    Height = 28
+    Top = 72
+    Width = 208
+    DataField = 'cidade'
+    DataSource = frmcadastrousuario.dsUsuario
+    MaxLength = 50
+    TabOrder = 7
+  end
+  object DBEdit8: TDBEdit
+    Left = 632
+    Height = 28
+    Top = 112
+    Width = 208
+    DataField = 'uf'
+    DataSource = frmcadastrousuario.dsUsuario
+    MaxLength = 2
+    TabOrder = 8
+  end
+  object DBEdit9: TDBEdit
+    Left = 632
+    Height = 28
+    Top = 152
+    Width = 208
+    DataField = 'cep'
+    DataSource = frmcadastrousuario.dsUsuario
+    MaxLength = 8
+    TabOrder = 9
+    OnChange = DBEdit9Change
+  end
+  object DBEdit10: TDBEdit
+    Left = 632
+    Height = 28
+    Top = 192
+    Width = 208
+    DataField = 'telefone'
+    DataSource = frmcadastrousuario.dsUsuario
+    MaxLength = 20
+    TabOrder = 10
+  end
+  object DBEdit11: TDBEdit
+    Left = 632
+    Height = 28
+    Top = 232
+    Width = 208
+    DataField = 'cpf'
+    DataSource = frmcadastrousuario.dsUsuario
+    MaxLength = 11
+    TabOrder = 11
+  end
+  object Label1: TLabel
+    Left = 56
+    Height = 20
+    Top = 40
+    Width = 49
+    Caption = 'Código'
+  end
+  object Label2: TLabel
+    Left = 56
+    Height = 20
+    Top = 80
+    Width = 41
+    Caption = 'Nome'
+  end
+  object Label3: TLabel
+    Left = 56
+    Height = 20
+    Top = 120
+    Width = 78
+    Caption = 'Logradouro'
+  end
+  object Label4: TLabel
+    Left = 56
+    Height = 20
+    Top = 240
+    Width = 54
+    Caption = 'Número'
+  end
+  object Label5: TLabel
+    Left = 56
+    Height = 20
+    Top = 160
+    Width = 95
+    Caption = 'Complemento'
+  end
+  object Label6: TLabel
+    Left = 57
+    Height = 20
+    Top = 200
+    Width = 40
+    Caption = 'Bairro'
+  end
+  object Label7: TLabel
+    Left = 536
+    Height = 20
+    Top = 80
+    Width = 47
+    Caption = 'Cidade'
+  end
+  object Label8: TLabel
+    Left = 536
+    Height = 20
+    Top = 120
+    Width = 17
+    Caption = 'UF'
+  end
+  object Label9: TLabel
+    Left = 536
+    Height = 20
+    Top = 160
+    Width = 25
+    Caption = 'CEP'
+  end
+  object Label10: TLabel
+    Left = 536
+    Height = 20
+    Top = 200
+    Width = 57
+    Caption = 'Telefone'
+  end
+  object Label11: TLabel
+    Left = 537
+    Height = 20
+    Top = 232
+    Width = 24
+    Caption = 'CPF'
+  end
+end
